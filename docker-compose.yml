@@ -1,12 +1,10 @@
-version: '3.9'
-
 services:
   frontend:
     build:
       context: ./apps/frontend
       dockerfile: Dockerfile
     expose:
-      - "80"  # Internal-only, used by nginx
+      - "80"
     networks:
       - webnet
 
