@@ -5,6 +5,9 @@ services:
       dockerfile: apps/frontend/Dockerfile
     expose:
       - "80"
+    volumes:
+      - ./ssl/certs:/etc/ssl/certs:ro
+      - ./ssl/private:/etc/ssl/private:ro
     networks:
       - webnet
 
