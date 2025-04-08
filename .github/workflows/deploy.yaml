@@ -26,3 +26,6 @@ jobs:
           docker compose down
           docker compose up -d --build
         EOF
+
+		- name: Check Container Status
+			run: docker ps
